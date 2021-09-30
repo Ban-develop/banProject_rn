@@ -10,6 +10,7 @@ import {
   TextInput,
   FlatList,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 import Axios from 'axios';

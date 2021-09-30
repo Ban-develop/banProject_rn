@@ -13,7 +13,8 @@ import {
 } from 'react-native';
 
 import HeaderComponent from '../../Component/Header';
-//import ARModelView, { ModelTypes } from 'react-native-3d-model-view'
+
+// import ModelView from 'react-native-gl-model-view';
 const NoticeScreen = (props) => {
 
     const onShare = async () => {
@@ -45,20 +46,23 @@ const NoticeScreen = (props) => {
                 <Text>Notice</Text>
                 <Text>NoticeScreen</Text>
                 <Button onPress={onShare} title="Share" />
+                <Button onPress={()=>props.navigation.navigate('TestScreen')} title="3D" />
             </View>
-            {/* <ARModelView
-              source={{ zip: 'https://github.com/BonnierNews/react-native-3d-model-view/blob/master/example/obj/Hamburger.zip?raw=true' }}
-              onLoadModelStart={this.onLoadModelStart}
-              onLoadModelSuccess={this.onLoadModelSuccess}
-              onLoadModelError={this.onLoadModelError}
-              onStart={this.onStart}
-              onSurfaceFound={this.onSurfaceFound}
-              onSurfaceLost={this.onSurfaceLost}
-              onSessionInterupted={this.onSessionInterupted}
-              onSessionInteruptedEnded={this.onSessionInteruptedEnded}
-              onPlaceObjectSuccess={this.onPlaceObjectSuccess}
-              onPlaceObjectError={this.onPlaceObjectError}
-              onTrackingQualityInfo={this.onTrackingQualityInfo} /> */}
+            {/* <ModelView
+                model={{
+                  uri: require('../../images/Hamburger.png'),
+                }}
+                texture={{
+                  uri: require('../../images/Hamburger.png'),
+                }}
+
+                scale={0.01}
+
+                translateZ={-2}
+                rotateZ={270}
+
+                style={{flex: 1}}
+            /> */}
         </SafeAreaView>
     )
 }

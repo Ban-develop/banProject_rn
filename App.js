@@ -36,6 +36,7 @@ const Tab = createBottomTabNavigator();
 import SearchScreen from './src/Screens/Common/SearchScreen';
 import HeartScreen from './src/Screens/Common/HeartScreen';
 import NoticeScreen from './src/Screens/Common/NoticeScreen';
+import TestScreen from './src/Screens/Common/TestScreen';
 
 //멤버
 import AuthScreen from './src/Screens/Login/AuthScreen';
@@ -137,6 +138,7 @@ const StackNavigation = (props) => {
       <Stack.Screen name="SearchScreen" component={SearchScreen}  options={{ title: '', headerTransparent: true, headerShown: false }}/>
       <Stack.Screen name="HeartScreen" component={HeartScreen} options={{ title: '', headerTransparent: true, headerShown: false }} />
       <Stack.Screen name="NoticeScreen" component={NoticeScreen}  options={{ title: '', headerTransparent: true, headerShown: false }}/>
+      <Stack.Screen name="TestScreen" component={TestScreen}  options={{ title: '', headerTransparent: true, headerShown: false }}/>
     </Stack.Navigator>
   )
 }
